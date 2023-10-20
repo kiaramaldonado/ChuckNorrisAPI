@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* img {
+    width: 100%;
+    height: auto;
+    display: block;
+} */
+
+body {
+    padding: 30px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('https://texashighways.com/wp-content/uploads/2019/01/CN_Vid_Set-02-1024x576.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+body::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the opacity by changing the last value (0.5) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: lightgoldenrodyellow;
+    text-shadow: 1px;
+    font-size: 1.875rem;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    width: 100%;
+    margin: 130px auto;
+    text-align: center;
+    color: lightgoldenrodyellow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 1.3rem;
+    padding: 20px;
+}
+
+.buttonBox {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.buttonBox #refresh_btn {
+    text-align: center;
+    padding: 14px;
+    width: 20%;
+    background-color: rgb(139, 0, 0);
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s;
+    /* Add a smooth transition */
+
+    /* Change background and cursor on hover */
+    &:hover {
+        background-color: rgb(95, 1, 1);
+        /* Darker color on hover */
+        cursor: pointer;
+        /* Change cursor to a pointer on hover */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .buttonBox #refresh_btn {
+        width: 50%;
+        /* Adjust the button width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .buttonBox #refresh_btn {
+        width: 100%;
+    }
+}
